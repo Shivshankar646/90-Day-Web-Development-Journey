@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+</head>
+<body>
+    <form>
+        <label for="full-name">Enter your full-name</label>
+        <input type="text" id="full-name" placeholder="enter your full name" required>
+        <label for="email">Enter your email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <label for="phone-no">Enter your phone number</label>
+        <input type="tel" id="phone-no" placeholder="Enter your number" required>
+        <label for="password">Account password</label>
+        <input type="password" id="password" placeholder="Enter account password" required>
+        <label for="location">Select your Location below</label>
+        <select name="location" id="location" required>
+            <option value="mahur">Mahur</option>
+            <option value="nanded">nanded</option>
+            <option value="pune">pune</option>
+            <option value="hyderabad">hyderabad</option>
+        </select>
+        <label>select your room</label>
+        <label for="standard">standard</label>
+        <input type="radio" id="standard" value="standard" name="room" required>
+        <label for="delux">delux</label>
+        <input type="radio" id="delux" value="delux" name="room">
+        <label for="suite">suite</label>
+        <input type="radio" id="suite" value="suite" name="room">
+        <label>skills select</label>
+        <label for="html">html</label>
+        <input type="checkbox" id="html" value="html" name="skills">
+        <label for="css">css</label>
+        <input type="checkbox" id="css" value="css" name="skills">
+        <label for="javascript">javascript</label>
+        <input type="checkbox" id="javascript" value="javascript" name="skills">
+        <label for="react">react</label>
+        <input type="checkbox" id="react" value="react" name="skills">
+        <label for="message">Enter your message below</label>
+        <textarea name="message" id="message" placeholder="Enter your message here" required></textarea>
+
+    <button>Register</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+<body>
+    <form>
+        <label for="fullname">Enter Your Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter your name " required>
+        <label for="email">Enter Your Email</label>
+        <input type="email" id="email" placeholder="Enter Email only" required>
+        <label for="password">Enter your password</label>
+        <input type="password" id="password" placeholder="Enter password" required>
+        <button>Register</button>
+    </form>
+ <label for="room">Choose your room type</label>
+ <input type="radio" name="room" value="delux">
+ <input type="radio" name="room" value="suite">
+ <input type="radio" name="room" value="standard">
+
+ <form>
+    <h3>choose one option below</h3>
+    <label for="email">Email</label>
+    <input type="radio" id="email" name="contact" value="Email">
+    <label for="phone">phone</label>
+    <input type="radio" id="phone" name="contact" value="phone" required>
+    <label for="whatsapp">Whatsapp</label>
+    <input type="radio" id="whatsapp" name="contact" value="Whatsapp">
+ </form>
+ <form action="">
+     <label for="city">choose the city</label>
+     <select name="cities" id="city" required>
+         <option value="mahur">Mahur</option>
+         <option value="nanded">Nanded</option>
+         <option value="pune">Pune</option>
+         <option value="hyderbad">Hyderbad</option>
+        </select>
+        <button>submit</button>
+    </form>
+
+    <label for="message">Enter your enquire</label>
+    <textarea required placeholder="Enter your enquire here please" name="message" id="message"></textarea>
+
+    <h2>choose your skills</h2>
+    <label for="html">Html</label>
+    <input type="checkbox" id="html" name="skills">
+    <label for="css">css</label>
+    <input type="checkbox" id="css" name="skills">
+    <label for="javascript">javascript</label>
+    <input type="checkbox" id="javascript" name="skills">
+    <label for="react">React</label>
+    <input type="checkbox" id="react" name="skills">
+</body>
+</html>
