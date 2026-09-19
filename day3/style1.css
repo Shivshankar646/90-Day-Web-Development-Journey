@@ -1,0 +1,43 @@
+body{
+    font-family: sans-serif;
+    background-color: aqua;
+    
+}
+header{
+    text-align: center;
+    background-color: aliceblue;
+}
+#name{
+    font-weight: bolder;
+}
+header p{
+    color: red;
+    font-size: medium;
+}
+.about{
+    width: 50%;
+    line-height: 2rem;
+}
+.about h2{
+    color: rgb(17, 0, 255);
+    font-weight: 600;
+    font-style: italic;
+}
+.skills{
+    background-color: aquamarine;
+}
+.skills ul li{
+line-height: 2rem;
+color: red;
+
+
+
+}
+.skills h2{
+    color: brown;
+    text-align: center;
+    font-weight: 800;
+    font-size: 40px;
+    font-style: oblique;
+
+}

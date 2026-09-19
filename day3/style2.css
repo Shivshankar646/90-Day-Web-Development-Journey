@@ -1,0 +1,21 @@
+body{
+    margin: 0px;
+    background-color: rgb(192, 231, 218);
+    text-align: center;
+}
+h1{
+    color: red;
+    font-size: 40px;
+font-weight: 900;
+}
+#about{
+    width: 50%;
+    line-height: 1.6;
+    background-color: rgb(232, 232, 236);
+}
+.skills{
+    background-color: rgb(236, 133, 133);
+    color: darkblue;
+    font-size: 18px;
+    line-height: 1.8;
+}

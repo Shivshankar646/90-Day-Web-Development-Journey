@@ -1,0 +1,42 @@
+body{
+    font-family: sans-serif;
+    background-color: lightgray;
+}
+.intro{
+    color: rgb(0, 0, 0);
+    font-weight: normal;
+    line-height: 30px;
+}
+h1{
+    color: darkblue;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    
+}
+h2{
+    color: rgb(3, 2, 2);
+    font-weight: 600;
+}
+#new{
+    font-style: italic;
+}
+a{
+    text-decoration: none;
+}
+div{
+    width: 300px;
+    height: 200px;
+    background-color: yellow;
+}
+.hero{
+    width: 80%;
+    height: 50vh;
+}
+
+h2{
+    font-size: 2rem;
+}
+p{
+    font-size: 1em;
+}
