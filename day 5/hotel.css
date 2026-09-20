@@ -1,0 +1,24 @@
+/* .room-container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.room-card{
+    flex: 1 1 250px;
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 10px;
+} */
+
+.room-container {
+    display: flex;
+    gap: 20px;
+    border: 2px solid black;
+    flex-wrap: nowrap;
+}
+
+.room-card {
+    flex: 1 1 250px;
+    padding: 20px;
+    border: 2px solid red;
+}
