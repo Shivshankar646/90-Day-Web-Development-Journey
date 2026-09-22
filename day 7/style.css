@@ -1,0 +1,145 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    color: white;
+    background-color: black;
+    line-height: 1.5;
+}
+*{
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(36, 32, 32);
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
+}
+button{
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 8px 10px ;
+}
+button:hover{
+    background-color:black;
+    color: white;
+}
+.navbar{
+    display: flex;
+    justify-content:space-between;
+    padding: 20px;
+}
+.nav-links{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.nav-links a{
+    color: white;
+    transition: 0.3s;
+}
+.nav-links a:hover{
+    color: rgb(249, 111, 111);
+
+}
+/* hero-section */
+#hero{
+height:50vh;
+display: flex;
+padding: 0px 30px;
+justify-content: space-between;
+align-items: center;
+
+}
+.hero-content h2{
+font-size: 40px;
+}
+.hero-content p{
+    font-size: 20px;
+}
+.hero-image  img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+.hero-content{
+    max-width: 50%;
+}
+/* about section */
+#about{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: aliceblue;
+    color: black;
+    min-height: 42vh;
+    width: 100%;
+    padding: 0px 30px;
+    justify-content: space-between;
+    border-radius: 5px;
+    align-items: center;
+}
+.about-image img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+.about-content{
+    max-width: 50%;
+}
+.about-content h2{
+    font-size: 40px;
+}
+.about-content p{
+    font-size: 20px;
+}
+/* room-section */
+#rooms{
+ text-align: center;
+}
+.rooms-container{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+}
+.room-card{
+max-width: 300px;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px;
+}
+.room-card img{
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 30vh;
+}
+.room-footer{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+   width: 100%;
+   margin-top:auto;
+}
+@media (max-width:768px) {
+    .rooms-container{
+        grid-template-columns:1fr;
+    }
+}
+@media (min-width:768px ) {
+    .rooms-container{
+        grid-template-columns: 2fr;
+    }
+}
