@@ -1,145 +1,381 @@
-body{
-    margin: 0px;
-    padding: 0px;
-    font-family: sans-serif;
-    color: white;
-    background-color: black;
-    line-height: 1.5;
-}
-*{
-    box-sizing: border-box;
-}
-header{
-    background-color: rgb(36, 32, 32);
-    border-radius: 10px;
-}
-a{
-    text-decoration: none;
-}
-button{
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0px 8px 10px ;
-}
-button:hover{
-    background-color:black;
-    color: white;
-}
-.navbar{
-    display: flex;
-    justify-content:space-between;
-    padding: 20px;
-}
-.nav-links{
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    align-items: center;
-}
-.nav-links a{
-    color: white;
-    transition: 0.3s;
-}
-.nav-links a:hover{
-    color: rgb(249, 111, 111);
+    body{
+        margin: 0px;
+        padding: 0px;
+        font-family: sans-serif;
+        color: white;
+        background-color: black;
+        line-height: 1.5;
+    }
+    *{
+        box-sizing: border-box;
+    }
+    header{
+        background-color: rgb(36, 32, 32);
+        border-radius: 10px;
+    }
+    a{
+        text-decoration: none;
+    }
+    button{
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 0px 8px 10px ;
+    }
+    button:hover{
+        background-color:black;
+        color: white;
+    }
+    .navbar{
+        display: flex;
+        justify-content:space-between;
+        padding: 20px;
+    }
+    .nav-links{
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-links a{
+        color: white;
+        transition: 0.3s;
+    }
+    .nav-links a:hover{
+        color: rgb(249, 111, 111);
 
-}
-/* hero-section */
-#hero{
-height:50vh;
-display: flex;
-padding: 0px 30px;
-justify-content: space-between;
-align-items: center;
-
-}
-.hero-content h2{
-font-size: 40px;
-}
-.hero-content p{
-    font-size: 20px;
-}
-.hero-image  img{
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 10px;
-}
-.hero-content{
-    max-width: 50%;
-}
-/* about section */
-#about{
+    }
+    /* hero-section */
+    #hero{
+    height:50vh;
     display: flex;
-    flex-direction: row-reverse;
-    background-color: aliceblue;
-    color: black;
-    min-height: 42vh;
-    width: 100%;
     padding: 0px 30px;
     justify-content: space-between;
-    border-radius: 5px;
     align-items: center;
+
+    }
+    .hero-content h2{
+    font-size: 40px;
+    }
+    .hero-content p{
+        font-size: 20px;
+    }
+    .hero-image  img{
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 10px;
+    }
+    .hero-content{
+        max-width: 50%;
+    }
+    /* about section */
+    #about{
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: aliceblue;
+        color: black;
+        min-height: 42vh;
+        width: 100%;
+        padding: 0px 30px;
+        justify-content: space-between;
+        border-radius: 5px;
+        align-items: center;
+    }
+    .about-image img{
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 10px;
+    }
+    .about-content{
+        max-width: 50%;
+    }
+    .about-content h2{
+        font-size: 40px;
+    }
+    .about-content p{
+        font-size: 20px;
+    }
+    /* room-section */
+    #rooms{
+    text-align: center;
+    }
+    .rooms-container{
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(3,1fr);
+        justify-items: center;
+    }
+    .room-card{
+    max-width: 300px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition:scale 1s ease;
+    }
+    .room-card:hover{
+    scale: 1.05;
+    }
+    .room-card img{
+        width: 100%;
+        max-width: 300px;
+        border-radius: 10px;
+        object-fit: cover;
+        height: 30vh;
+        transition: scale 0.5s ease;
+    }
+    .room-card img:hover{
+    scale: 1.05;
+    }
+    .room-card h3{
+        font-size: 30px;
+        margin: 10px;
+    }
+    .room-card p{
+        font-size: 20px;
+        line-height: 25px;
+        color: rgba(57, 9, 35, 0.781);
+    }
+    .section-heading h2{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .section-heading p{
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .room-footer{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: center;
+    width: 100%;
+    margin-top:auto;
+    }
+    .room-footer span{
+        font-size: 20px;
+        font-weight: 700;
+        color: brown;
+    }
+    .room-footer button{
+        background-color: rgb(128, 96, 80);
+        color: rgb(255, 253, 253);
+        border: 2px solid rgb(241, 64, 0);
+        transition: transform 0.2s ease;
+    }
+    .room-footer button:hover{
+        transform:scale(1.2);
+    }
+    .features{
+        margin: 20px 0px;
+        text-align: center;
+    background-color: rgb(110, 107, 103);
+    padding: 20px;
+    border-radius: 10px;
+    }
+    .features h2{
+        font-size: 30px;
+        line-height: 35px;
+        padding: 10px;
+        font-weight: 500;
+    }
+
+    .features-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    }
+
+    .feature{
+        background-color: rgb(102, 77, 77);
+        padding: 20px;
+        color: white;
+        border-radius: 10px;
+        transition: transform 0.5s ease;
+    }
+    .feature:hover{
+    transform: scale(1.05);
+    }
+    .feature h3{
+        font-size: 25px;
+        line-height: 26px;
+    }
+    .feature p{
+        font-size: 20px;
+        line-height: 21px;
+    }
+    @media (max-width:768px) {
+        .rooms-container{
+            grid-template-columns:1fr;
+        }
+        .features-container{
+            grid-template-columns:1fr;
+        }
+        .footer-content{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .navbar{
+            flex-direction: column;
+            justify-content: center;
+        margin-left: 10px;
+        }
+        .logo h1{
+            text-align: center;
+        }
+        .nav-links{
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        #hero{
+            flex-direction: column;
+            height: auto;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+        .hero-content{
+             width: 100%;
+            max-width: 100%;
+            text-align: center;
+        }
+        .hero-content h2{
+            width: 100%;
+        font-size: 22px;
+        line-height: 25px;
+        text-align: center;
+       
+        }
+        .hero-content p{
+        font-size: 12px;
+        text-align: center;
+        }
+        .hero-content button{
+             margin-bottom: 20px;
+        }
+        #about{
+            flex-direction: column-reverse;
+        }
+        .about-content{
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+        }
+        .about-content h2{
+        font-size: 35px;
+    }
+    .about-content p{
+        font-size: 15px;
+        width: 100%;
+        text-align: center;
+
+    }
+    .about-content button{
+        margin-bottom: 20px;
+    }
+    .contact-content{
+        text-align: center;
+    }
+    .contact-content h2{
+        font-size: 30px;
+        line-height: 31px;
+    }
+     .contact-content p{
+    font-size: 20px;
+    line-height: 21px;
+    }
+    .footer-content{
+        text-align: center;
+    }
+    .room-card img{
+        height: 20vh;
+    }
+    .room-card h3{
+        font-size: 25px;
+    }
+    .room-card p{
+        font-size: 15px;
+    }
+    .feature h3{
+    font-size: 20px;
+}
+
+.feature p{
+    font-size: 15px;
 }
 .about-image img{
     width: 100%;
     max-width: 400px;
     height: auto;
-    border-radius: 10px;
 }
-.about-content{
-    max-width: 50%;
-}
-.about-content h2{
-    font-size: 40px;
-}
-.about-content p{
-    font-size: 20px;
-}
-/* room-section */
-#rooms{
- text-align: center;
-}
-.rooms-container{
-    display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(3,1fr);
-    justify-items: center;
-}
-.room-card{
-max-width: 300px;
-background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);
-border-radius: 20px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 10px;
-}
-.room-card img{
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    object-fit: cover;
-    height: 30vh;
-}
-.room-footer{
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    align-items: center;
-   width: 100%;
-   margin-top:auto;
-}
-@media (max-width:768px) {
-    .rooms-container{
-        grid-template-columns:1fr;
+
     }
-}
-@media (min-width:768px ) {
-    .rooms-container{
-        grid-template-columns: 2fr;
+    @media (min-width:769px) and (max-width:1034px) {
+        .rooms-container{
+            grid-template-columns:repeat(2,1fr);
+        }
+        .features-container{
+            grid-template-columns:repeat(2,1fr);
+        }
+        .footer-content{
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
     }
-}
+    #contact{
+    background-color: aqua;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 20vh;
+    }
+    .contact-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .contact-content h2{
+        font-size: 40px;
+        line-height: 41px;
+    }
+
+    .contact-content p{
+    font-size: 25px;
+    line-height: 26px;
+    }
+    .contact-content h2:hover,.contact-content p:hover{
+        color: rgb(209, 57, 77);
+    }
+    footer{
+
+    }
+
+    .footer-content{
+        display: flex;
+        justify-content: space-around;
+            min-height: 20vh;
+        padding: 20px;
+    }
+    .footer-content a{
+    color: white;
+    }
+    .footer-content h3{
+        font-size: 30px;
+        line-height: 31px;
+    }
+    footer p{
+        text-align: center;
+        font-size: 20px;
+        line-height: 21px;
+    }
