@@ -159,31 +159,149 @@
 
 // createProfile(user);
 
-function processOrder(orderData, discount = 0) {
-    let {customer,items,price} = orderData;
-    let copy =[...items];
-    copy.push("Keyboard");
+// function processOrder(orderData, discount = 0) {
+//     let {customer,items,price} = orderData;
+//     let copy =[...items];
+//     copy.push("Keyboard");
 
-    let finalPrice = price * discount /100;
-    let lastFinal = price-finalPrice;
-    return {
-    name: customer?.name,
-    city: customer?.city,
-    phone: customer?.phone ?? "Not Provided",
-    items:copy,
-    finalPrice: lastFinal
+//     let finalPrice = price * discount /100;
+//     let lastFinal = price-finalPrice;
+//     return {
+//     name: customer?.name,
+//     city: customer?.city,
+//     phone: customer?.phone ?? "Not Provided",
+//     items:copy,
+//     finalPrice: lastFinal
+// }
+// }
+
+// let order = {
+//     customer: {
+//         name: "Shiv",
+//         city: "Nanded"
+//     },
+//     items: ["Laptop", "Mouse"],
+//     price: 51000
+// };
+
+// let result =processOrder(order);
+// console.log(result);
+// console.log(processOrder(order, 10));
+
+
+// function findSkillEmployees(employees) {
+
+//     let skill =[]
+// for (let i = 0; i < employees.length; i++) {
+   
+//     for (let j = 0; j < employees[i].skills.length; j++) {
+        
+//         if (employees[i].skills[j] === "React") {
+//        skill.push(employees[i].name);
+//     }
+    
+    
+// }
+
+// }
+// console.log(skill)
+
+// }
+
+
+// let employees = [
+//     { name: "Shiv", skills: ["HTML", "CSS", "JavaScript"] },
+//     { name: "Amit", skills: ["JavaScript", "React", "Node"] },
+//     { name: "Neha", skills: ["HTML", "CSS", "React"] }
+// ];
+
+// findSkillEmployees(employees);
+
+
+// function findSkillEmployees(employees) {
+//     let final = []
+// employees.map(employe => 
+//     employe.skills.filter(skill => {
+
+//         if (skill === "React") {
+//             final.push(employe.name);
+//         }
+//     }
+// )
+// )
+// console.log(final)
+// }
+
+
+// let employees = [
+//     { name: "Shiv", skills: ["HTML", "CSS", "JavaScript"] },
+//     { name: "Amit", skills: ["JavaScript", "React", "Node"] },
+//     { name: "Neha", skills: ["HTML", "CSS", "React"] }
+// ];
+
+// findSkillEmployees(employees);
+
+
+
+function analyzeEmployees(employees) {
+    
+let itDepartemnet = employees.filter(employe => employe.department === "IT");
+let finalIT = itDepartemnet.map(employe => employe.name);
+let react = []
+let reactEmploye = employees.map(employe => 
+    employe.skills.filter(skill => {
+
+        if (skill === "React") {
+            react.push(employe.name)
+        }
+    }
+    )
+)
+
+
+let finalHighest =[...employees].sort((a,b) => b.salary-a.salary);
+let lastFinalHighest = [finalHighest[0].name,finalHighest[1].name]
+let totalSalary = employees.reduce((total,employe) => total+employe.salary,0);
+let highestPaid = finalHighest[0].name;
+
+   return {
+    itEmployees: finalIT,
+
+    reactEmployees: react,
+
+    highSalaryEmployees: lastFinalHighest,
+
+    totalITSalary: totalSalary,
+
+    highestPaidEmployee: highestPaid
 }
 }
 
-let order = {
-    customer: {
+let employees = [
+    {
         name: "Shiv",
-        city: "Nanded"
+        department: "IT",
+        salary: 45000,
+        skills: ["HTML", "CSS", "JavaScript"]
     },
-    items: ["Laptop", "Mouse"],
-    price: 51000
-};
+    {
+        name: "Amit",
+        department: "IT",
+        salary: 70000,
+        skills: ["JavaScript", "React", "Node"]
+    },
+    {
+        name: "Neha",
+        department: "HR",
+        salary: 50000,
+        skills: ["Communication", "Excel"]
+    },
+    {
+        name: "Rahul",
+        department: "IT",
+        salary: 60000,
+        skills: ["HTML", "CSS", "React"]
+    }
+];
 
-let result =processOrder(order);
-console.log(result);
-console.log(processOrder(order, 10));
+console.log(analyzeEmployees(employees));
