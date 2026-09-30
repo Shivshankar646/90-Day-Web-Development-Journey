@@ -248,7 +248,7 @@ function analyzeEmployees(employees) {
 let itDepartemnet = employees.filter(employe => employe.department === "IT");
 let finalIT = itDepartemnet.map(employe => employe.name);
 let react = []
-let reactEmploye = employees.map(employe => 
+employees.map(employe => 
     employe.skills.filter(skill => {
 
         if (skill === "React") {
@@ -259,21 +259,40 @@ let reactEmploye = employees.map(employe =>
 )
 
 
-let finalHighest =[...employees].sort((a,b) => b.salary-a.salary);
-let lastFinalHighest = [finalHighest[0].name,finalHighest[1].name]
-let totalSalary = employees.reduce((total,employe) => total+employe.salary,0);
-let highestPaid = finalHighest[0].name;
+let highestSalary = employees[0].salary;
+let nameOfEmploye = [] ;
+
+for (let i = 0; i < employees.length; i++) {
+if (employees[i].salary > highestSalary ) {
+    highestSalary=employees[i].salary;
+    nameOfEmploye.push(employees[i].name);
+  let bhai={
+    name:employees[i].name,
+    salary:employees[i].salary
+  }
+
+
+
+    
+  
+}
+}
+
+
+let itTotalSalary =employees.filter(employe => employe .department === "IT");
+
+let totalSalary = itTotalSalary.reduce((total,employe) => total+employe.salary,0);
 
    return {
     itEmployees: finalIT,
 
     reactEmployees: react,
 
-    highSalaryEmployees: lastFinalHighest,
+    highSalaryEmployees:nameOfEmploye,
 
     totalITSalary: totalSalary,
 
-    highestPaidEmployee: highestPaid
+    highestPaidEmployee: nameOfEmploye
 }
 }
 
