@@ -103,19 +103,47 @@
 //     console.log(nameInput.value)
 // })
 
-let counter =0;
-let count = document.getElementById("count");
-let increase = document.getElementById("increase");
-let decrease = document.getElementById("decrease");
-increase.addEventListener("click",function() {
-   counter++;
-   count.textContent=counter;
+// let counter =0;
+// let count = document.getElementById("count");
+// let increase = document.getElementById("increase");
+// let decrease = document.getElementById("decrease");
+// increase.addEventListener("click",function() {
+//    counter++;
+//    count.textContent=counter;
 
-})
-decrease.addEventListener("click",function() {
-    if (counter > 0) {
+// })
+// decrease.addEventListener("click",function() {
+//     if (counter > 0) {
         
-        counter--;
-    } 
-   count.textContent =counter;
-})
+//         counter--;
+//     } 
+//    count.textContent =counter;
+// })
+
+// let container =document.getElementById("container");
+// container.innerHTML = "<strong>Hello</strong>";
+// // container.textContent = "<strong>Hello</strong>";
+
+// let message =document.getElementById("message");
+// message.innerHTML="<strong>Hello Shiv</strong> I am learning JavaScript";
+
+
+// //practice------------------------
+
+// let oldSkills = ["HTML", "CSS", "JavaScript"];
+// let newSkills = ["React", "Node"];
+// let copy =[...oldSkills,...newSkills];
+
+let frontend = ["HTML", "CSS"];
+let advanced = ["JavaScript", "React"];
+function addSkills(frontend,advanced) {
+
+    let copy =[...frontend,...advanced];
+    console.log(copy)
+}
+
+// let result =addSkills("HTML", "CSS", "JavaScript", "React");
+// console.log(result);
+
+
+addSkills(frontend, advanced);
