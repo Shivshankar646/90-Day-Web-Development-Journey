@@ -180,7 +180,13 @@ let gettodo =localStorage.getItem("todos");
 let newtodos =JSON.parse(gettodo);
 newtodos.forEach(todo => {
     let li =document.createElement("li");
-    li.textContent = todo;
+    let span =document.createElement("span");
+    let btn = document.createElement("button");
+    btn.classList.add("delete");
+    btn.textContent="Delete";
+    span.textContent = todo;
+    li.appendChild(span)
+    li.appendChild(btn)
     todolist.appendChild(li);
 });
 
@@ -188,11 +194,26 @@ addbtn.addEventListener("click",function(event) {
     if (todoInput.value === "") {
         
     }else{
-     let finaltodo = newtodos.push(todoInput.value);
+     newtodos.push(todoInput.value);
      localStorage.setItem("todos",JSON.stringify(newtodos));
-      let li =document.createElement("li");
-    li.textContent = todoInput.value;
+        let li =document.createElement("li");
+    let span =document.createElement("span");
+    let btn = document.createElement("button");
+    btn.classList.add("delete");
+    btn.textContent="Delete";
+    span.textContent = todoInput.value;
+    li.appendChild(span)
+    li.appendChild(btn)
     todolist.appendChild(li);
-     todoInput.value ="";
+    }
+})
+todolist.addEventListener("click",function(event) {
+    if (event.target.classList.contains("delete")) {
+        let todoparent = event.target.parentElement;
+        let todotext = todoparent.querySelector("span").textContent;
+        todoparent.remove();
+      newtodos = newtodos.filter(todo => todo !== todotext);
+        localStorage.setItem("todos",JSON.stringify(newtodos))
+       
     }
 })
